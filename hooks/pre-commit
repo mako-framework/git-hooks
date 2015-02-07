@@ -1,0 +1,32 @@
+#!/usr/bin/php
+<?php
+
+// Check if we have php-cs-fixer in the path and exit if we don't
+
+$fixer = trim(shell_exec('which php-cs-fixer'));
+
+if(empty($fixer))
+{
+    exit(1);
+}
+
+// Get the list of modified files and run PHP files through the php-cs-fixer
+
+exec('git diff --cached --name-status', $output);
+
+foreach($output as $file)
+{
+	if(substr($file, 0, 1) !== 'M')
+	{
+		continute; // File isn't modified so we'll just skip it
+	}
+
+	$file = trim(substr($file, 1));
+
+	if(file_exists($file) && pathinfo($file, PATHINFO_EXTENSION) === 'php')
+	{
+		exec($fixer . ' fix ' . $file . ' --fixers=trailing_spaces,whitespacy_lines');
+
+		exec('git add ' . $file);
+	}
+}
