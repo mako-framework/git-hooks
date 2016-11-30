@@ -25,7 +25,7 @@ foreach($output as $file)
 
 	if(file_exists($file) && pathinfo($file, PATHINFO_EXTENSION) === 'php')
 	{
-		exec($fixer . ' fix ' . $file . ' --fixers=trailing_spaces,whitespacy_lines,encoding,linefeed');
+		exec($fixer . ' fix ' . $file . ' --fixers=trailing_spaces,whitespacy_lines,encoding,linefeed,eof_ending,elseif');
 
 		exec('git add ' . $file);
 	}
