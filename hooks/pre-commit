@@ -62,7 +62,7 @@ foreach($output as $file)
 
 	if(file_exists($file) && pathinfo($file, PATHINFO_EXTENSION) === 'php')
 	{
-		exec($fixer . ' fix ' . $file . ' --rules=' . implode(',', $rules));
+		exec($fixer . ' fix ' . $file . '--using-cache=no --rules=' . implode(',', $rules));
 
 		exec('git add ' . $file);
 	}
