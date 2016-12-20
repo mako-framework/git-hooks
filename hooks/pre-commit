@@ -49,17 +49,10 @@ if(empty($fixer))
 
 // Get the list of modified files and run PHP files through the php-cs-fixer
 
-exec('git diff --cached --name-status', $output);
+exec('git diff --cached --name-only --diff-filter=ACM', $output);
 
 foreach($output as $file)
 {
-	if(substr($file, 0, 1) !== 'M')
-	{
-		continute; // File isn't modified so we'll just skip it
-	}
-
-	$file = trim(substr($file, 1));
-
 	if(file_exists($file) && pathinfo($file, PATHINFO_EXTENSION) === 'php')
 	{
 		exec($fixer . ' fix ' . $file . '--using-cache=no --rules=' . implode(',', $rules));
