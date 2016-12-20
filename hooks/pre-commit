@@ -1,6 +1,28 @@
 #!/usr/bin/php
 <?php
 
+// php-cs-fixer rules
+
+$rules =
+[
+	'no_trailing_whitespace',
+	'no_whitespace_in_blank_line',
+	'encoding',
+	'single_blank_line_at_eof',
+	'elseif',
+	'blank_line_after_namespace',
+	'blank_line_after_opening_tag',
+	'cast_spaces',
+	'hash_to_slash_comment',
+	'lowercase_cast',
+	'lowercase_constants',
+	'lowercase_keywords',
+	'no_alias_functions',
+	'no_extra_consecutive_blank_lines',
+	'no_leading_import_slash',
+	'standardize_not_equals',
+];
+
 // Check if we have php-cs-fixer in the path and exit if we don't
 
 $fixer = trim(shell_exec('which php-cs-fixer'));
@@ -25,7 +47,7 @@ foreach($output as $file)
 
 	if(file_exists($file) && pathinfo($file, PATHINFO_EXTENSION) === 'php')
 	{
-		exec($fixer . ' fix ' . $file . ' --fixers=trailing_spaces,whitespacy_lines,encoding,linefeed,eof_ending,elseif');
+		exec($fixer . ' fix ' . $file . ' --rules=' . implode(',', $rules));
 
 		exec('git add ' . $file);
 	}
