@@ -33,5 +33,7 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * no_trailing_comma_in_singleline_array
 * no_trailing_whitespace_in_comment
 * no_whitespace_before_comma_in_array
+* whitespace_after_comma_in_array
+* trailing_comma_in_multiline_array
 * object_operator_without_whitespace
 * phpdoc_align
