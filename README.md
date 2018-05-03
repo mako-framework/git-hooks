@@ -4,36 +4,47 @@
 
 The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with the following fixers:
 
-* no_trailing_whitespace
-* no_whitespace_in_blank_line
-* encoding
-* single_blank_line_at_eof
-* elseif
+* array_syntax (syntax => short)
 * blank_line_after_namespace
 * blank_line_after_opening_tag
 * cast_spaces
+* elseif
+* encoding
+* full_opening_tag
+* function_declaration (closure_function_spacing => none)
 * hash_to_slash_comment
+* linebreak_after_opening_tag
 * lowercase_cast
 * lowercase_constants
 * lowercase_keywords
+* magic_constant_casing
+* method_argument_space
+* native_function_casing
 * no_alias_functions
+* no_blank_lines_after_phpdoc
+* no_closing_tag
 * no_extra_consecutive_blank_lines
 * no_leading_import_slash
-* standardize_not_equals
-* method_argument_space
-* linebreak_after_opening_tag
-* no_blank_lines_after_phpdoc
 * no_leading_namespace_whitespace
-* single_blank_line_before_namespace
-* native_function_casing
-* no_closing_tag
 * no_singleline_whitespace_before_semicolons
 * no_spaces_inside_parenthesis
 * no_trailing_comma_in_list_call
 * no_trailing_comma_in_singleline_array
 * no_trailing_whitespace_in_comment
+* no_trailing_whitespace
+* no_unused_imports
 * no_whitespace_before_comma_in_array
-* whitespace_after_comma_in_array
-* trailing_comma_in_multiline_array
+* no_whitespace_in_blank_line
 * object_operator_without_whitespace
+* ordered_imports
 * phpdoc_align
+* phpdoc_indent
+* phpdoc_no_access
+* phpdoc_order
+* phpdoc_scalar
+* phpdoc_summary
+* phpdoc_to_comment
+* phpdoc_trim
+* phpdoc_types
+* short_scalar_cast
+* single_blank_line_at_eof
