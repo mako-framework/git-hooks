@@ -4,14 +4,16 @@
 
 The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with the following fixers:
 
-* array_syntax (syntax => short)
+* array_syntax
 * blank_line_after_namespace
 * blank_line_after_opening_tag
 * cast_spaces
+* concat_space
 * elseif
 * encoding
 * full_opening_tag
-* function_declaration (closure_function_spacing => none)
+* function_declaration
+* function_typehint_space
 * hash_to_slash_comment
 * linebreak_after_opening_tag
 * lowercase_cast
@@ -24,15 +26,15 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * no_blank_lines_after_phpdoc
 * no_closing_tag
 * no_empty_statement
-* no_extra_consecutive_blank_lines
+* no_extra_blank_lines
 * no_leading_import_slash
 * no_leading_namespace_whitespace
 * no_singleline_whitespace_before_semicolons
 * no_spaces_inside_parenthesis
 * no_trailing_comma_in_list_call
 * no_trailing_comma_in_singleline_array
-* no_trailing_whitespace
 * no_trailing_whitespace_in_comment
+* no_trailing_whitespace
 * no_unused_imports
 * no_whitespace_before_comma_in_array
 * no_whitespace_in_blank_line
@@ -47,5 +49,17 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * phpdoc_to_comment
 * phpdoc_trim
 * phpdoc_types
+* return_type_declaration
 * short_scalar_cast
 * single_blank_line_at_eof
+* single_blank_line_before_namespace
+* single_import_per_statement
+* single_line_after_imports
+* single_quote
+* space_after_semicolon
+* standardize_not_equals
+* switch_case_semicolon_to_colon
+* switch_case_space
+* trailing_comma_in_multiline_array
+* trim_array_spaces
+* whitespace_after_comma_in_array
