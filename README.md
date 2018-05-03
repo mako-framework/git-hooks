@@ -23,6 +23,7 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * no_alias_functions
 * no_blank_lines_after_phpdoc
 * no_closing_tag
+* no_empty_statement
 * no_extra_consecutive_blank_lines
 * no_leading_import_slash
 * no_leading_namespace_whitespace
@@ -30,8 +31,8 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * no_spaces_inside_parenthesis
 * no_trailing_comma_in_list_call
 * no_trailing_comma_in_singleline_array
-* no_trailing_whitespace_in_comment
 * no_trailing_whitespace
+* no_trailing_whitespace_in_comment
 * no_unused_imports
 * no_whitespace_before_comma_in_array
 * no_whitespace_in_blank_line
