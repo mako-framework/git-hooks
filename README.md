@@ -8,6 +8,7 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * blank_line_after_namespace
 * blank_line_after_opening_tag
 * cast_spaces
+* combine_nested_dirname
 * concat_space (['spacing' => 'one'])
 * elseif
 * encoding
@@ -16,6 +17,7 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * function_to_constant
 * function_typehint_space
 * linebreak_after_opening_tag
+* list_syntax (['syntax' => 'short'])
 * logical_operators
 * lowercase_cast
 * lowercase_constants
@@ -36,11 +38,13 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * no_spaces_inside_parenthesis
 * no_trailing_comma_in_list_call
 * no_trailing_comma_in_singleline_array
-* no_trailing_whitespace_in_comment
 * no_trailing_whitespace
+* no_trailing_whitespace_in_comment
 * no_unused_imports
 * no_whitespace_before_comma_in_array
 * no_whitespace_in_blank_line
+* non_printable_character
+* normalize_index_brace
 * object_operator_without_whitespace
 * ordered_imports
 * phpdoc_align
@@ -67,4 +71,6 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * switch_case_space
 * trailing_comma_in_multiline_array
 * trim_array_spaces
+* visibility_required
+* void_return
 * whitespace_after_comma_in_array
