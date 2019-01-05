@@ -46,7 +46,7 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * non_printable_character
 * normalize_index_brace
 * object_operator_without_whitespace
-* ordered_imports
+* ordered_imports (['imports_order' => ['class', 'function', 'const']])
 * phpdoc_align
 * phpdoc_indent
 * phpdoc_no_access
