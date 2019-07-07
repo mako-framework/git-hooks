@@ -59,6 +59,7 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * pow_to_exponentiation
 * return_type_declaration
 * short_scalar_cast
+* simple_to_complex_string_variable
 * single_blank_line_at_eof
 * single_blank_line_before_namespace
 * single_import_per_statement
