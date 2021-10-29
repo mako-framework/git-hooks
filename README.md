@@ -25,7 +25,7 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * lowercase_static_reference
 * magic_constant_casing
 * magic_method_casing
-* method_argument_space
+* method_argument_space (['on_multiline' => 'ignore'])
 * native_function_casing
 * no_alias_functions
 * no_blank_lines_after_phpdoc
@@ -70,7 +70,7 @@ The ```pre-commit``` hook runs modified files through ```php-cs-fixer``` with th
 * standardize_not_equals
 * switch_case_semicolon_to_colon
 * switch_case_space
-* trailing_comma_in_multiline_array
+* trailing_comma_in_multiline_array (['elements' => ['arrays']])
 * trim_array_spaces
 * visibility_required
 * void_return
